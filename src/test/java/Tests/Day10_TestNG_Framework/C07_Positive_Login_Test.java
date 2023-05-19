@@ -27,6 +27,5 @@ public class C07_Positive_Login_Test {
 
         // 5 - Enter Login
         qualityDemyPage.LogInElementSecond.click();
-
     }
 }
