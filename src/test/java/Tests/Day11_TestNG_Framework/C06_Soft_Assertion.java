@@ -1,14 +1,11 @@
-package Tests.Day_11_TestNG_Framework;
+package Tests.Day11_TestNG_Framework;
 
 import Pages.AmazonPage;
 import Utilities.Driver;
 import Utilities.ReusableMethods;
 import org.openqa.selenium.Keys;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import java.util.Arrays;
 
 public class C06_Soft_Assertion {
     /*

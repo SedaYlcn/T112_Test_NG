@@ -1,11 +1,9 @@
-package Tests.Day_11_TestNG_Framework;
+package Tests.Day11_TestNG_Framework;
 
 import Pages.AmazonPage;
 import Utilities.Driver;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class C02_Depends_On_Method {

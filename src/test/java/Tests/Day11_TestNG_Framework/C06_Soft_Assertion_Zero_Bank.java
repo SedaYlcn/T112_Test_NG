@@ -1,4 +1,4 @@
-package Tests.Day_11_TestNG_Framework;
+package Tests.Day11_TestNG_Framework;
 
 import Pages.ZeroWebAppPage;
 import Utilities.Driver;
@@ -9,7 +9,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import javax.swing.*;
 import java.util.*;
 
 public class C06_Soft_Assertion_Zero_Bank {

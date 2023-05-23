@@ -1,4 +1,4 @@
-package Tests.Day_11_TestNG_Framework;
+package Tests.Day12_Page_Object_Model;
 
 import Pages.FacebookPage;
 import Utilities.Driver;
@@ -7,7 +7,7 @@ import com.github.javafaker.Faker;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class C04_Facebook_Login {
+public class C03_Facebook_Login {
 
     @Test
     public void facebookTest(){
@@ -36,6 +36,5 @@ public class C04_Facebook_Login {
 
         ReusableMethods.wait(3);
 
-        Driver.closeDriver();
     }
 }

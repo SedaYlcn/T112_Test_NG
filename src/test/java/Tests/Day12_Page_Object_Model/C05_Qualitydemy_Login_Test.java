@@ -1,34 +1,31 @@
-package Day12_Page_Object_Model;
+package Tests.Day12_Page_Object_Model;
 
 import Pages.QualityDemyPage;
-import Pages.ZeroWebAppPage;
+import Utilities.ConfigReader;
 import Utilities.Driver;
 import Utilities.ReusableMethods;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class C07_Positive_Login_Test {
+import java.security.Key;
+
+public class C05_Qualitydemy_Login_Test {
 
     @Test
-    public void test01(){
+    public void Test01(){
 
         QualityDemyPage qualityDemyPage = new QualityDemyPage();
 
-        // 1 - go to the "https://www.qualitydemy.com/"
-        Driver.getDriver().get("https://www.qualitydemy.com/");
-        ReusableMethods.wait(5);
-
-        qualityDemyPage.cookieAccept.click();
+        // 1 - Qualitydemy ana sayfasina gidin
+        Driver.getDriver().get(ConfigReader.getProperty("qdURL"));
 
         // 2 - click login button
         qualityDemyPage.logInElementFirst.click();
 
-        //  3 -Enter a valid email (a@a.com)
-        qualityDemyPage.userEmailBox.sendKeys("anevzatcelik@gmail.com"+ Keys.ENTER);
-
-        //  4- Enter a valid password
-        qualityDemyPage.userPasswordBox.sendKeys("Nevzat152032"+ Keys.ENTER);
+        //  3 -Enter a valid email and Enter a valid password
+        qualityDemyPage.userEmailBox.sendKeys(ConfigReader.getProperty("qdGecerliUsername")+ Keys.ENTER);
+        qualityDemyPage.userPasswordBox.sendKeys(ConfigReader.getProperty("qdGecerliPassword")+Keys.ENTER);
 
         // 5 - Enter Login
         qualityDemyPage.LogInElementSecond.submit();
@@ -42,4 +39,5 @@ public class C07_Positive_Login_Test {
         Driver.closeDriver();
 
     }
+
 }
