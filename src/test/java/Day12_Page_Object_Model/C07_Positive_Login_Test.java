@@ -1,8 +1,11 @@
-package Tests.Day10_TestNG_Framework;
+package Day12_Page_Object_Model;
 
 import Pages.QualityDemyPage;
 import Pages.ZeroWebAppPage;
 import Utilities.Driver;
+import Utilities.ReusableMethods;
+import org.openqa.selenium.Keys;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class C07_Positive_Login_Test {
@@ -14,18 +17,29 @@ public class C07_Positive_Login_Test {
 
         // 1 - go to the "https://www.qualitydemy.com/"
         Driver.getDriver().get("https://www.qualitydemy.com/");
+        ReusableMethods.wait(5);
+
         qualityDemyPage.cookieAccept.click();
 
         // 2 - click login button
         qualityDemyPage.logInElementFirst.click();
 
         //  3 -Enter a valid email (a@a.com)
-        qualityDemyPage.userEmailBox.sendKeys("a@a.com");
+        qualityDemyPage.userEmailBox.sendKeys("anevzatcelik@gmail.com"+ Keys.ENTER);
 
         //  4- Enter a valid password
-        qualityDemyPage.userPasswordBox.sendKeys("123123123");
+        qualityDemyPage.userPasswordBox.sendKeys("Nevzat152032"+ Keys.ENTER);
 
         // 5 - Enter Login
-        qualityDemyPage.LogInElementSecond.click();
+        qualityDemyPage.LogInElementSecond.submit();
+
+        // 6 - Control if it is successful entry
+        Assert.assertTrue(qualityDemyPage.entryControl.isDisplayed());
+
+
+        // 7- Close the page
+
+        Driver.closeDriver();
+
     }
 }

@@ -19,13 +19,19 @@ public class QualityDemyPage {
    @FindBy (xpath = "//*[text()='Log in']")
    public  WebElement logInElementFirst;
 
-   @FindBy (id="login-email")
+   @FindBy (xpath="//input[@name='email']")
     public WebElement userEmailBox;
 
-    @FindBy (id="login-password")
+    @FindBy (xpath="//input[@id='login-password']")
     public WebElement userPasswordBox;
 
-    @FindBy (xpath = "//button[text()='Login']")
+    @FindBy (xpath = "(//button[@type='submit'])[2]")
     public WebElement LogInElementSecond;
+
+    @FindBy (xpath = "//a[text()='Instructor']")
+    public WebElement entryControl;
+
+
+
 
 }
