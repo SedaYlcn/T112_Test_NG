@@ -1,4 +1,4 @@
-package Tests.Day11_TestNG_Framework;
+package Tests.Day13_Assertations;
 
 import Pages.AmazonPage;
 import Utilities.Driver;
@@ -7,7 +7,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class C06_Soft_Assertion {
+public class C02_Soft_Assertion {
     /*
     If we want to use soft assertion, we need to create an object of SoftAssertion class.
 

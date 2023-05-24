@@ -1,9 +1,9 @@
-package Tests.Day11_TestNG_Framework;
+package Tests.Day13_Assertations;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class C05_Hard_Assertion {
+public class C01_Hard_Assertion {
 
     /*
           There are two type of assertion

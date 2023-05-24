@@ -1,4 +1,4 @@
-package Tests.Day11_TestNG_Framework;
+package Tests.Day13_Assertations;
 
 import Pages.ZeroWebAppPage;
 import Utilities.Driver;
@@ -11,7 +11,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.util.*;
 
-public class C06_Soft_Assertion_Zero_Bank {
+public class C03_Soft_Assertion_Zero_Bank {
 
     @Test
     public void test01(){

@@ -35,8 +35,6 @@ public class C06_C05_Qualitydemy_Negative_Login_Test {
 
         Driver.closeDriver();
 
-
-
     }
 
 
