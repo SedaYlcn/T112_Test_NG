@@ -17,13 +17,25 @@ public class Driver {
     // getDriver() her kullanildiginda yeni bir driver olusturuyor, bunu engellemek ve kodumuzun duzgun calismasini
     // saglamak icin ilk kullanimda driver=new
 
-    public static WebDriver driver;
+    private static WebDriver driver;
+    private Driver(){
+        /* Singleton pattern kullanilarak istenmeyen yontemlerle
+           driver objesine erisilmesini engelledik
 
-    public static WebDriver getDriver() {
+           Constructor'i private yaparak bu class'dan obje olusturularak
+           class uyelerinin kullanilmasinin onune gectik
 
-        String istenenBrowser = ConfigReader.getProperty("browser"); // chrome, firefox, safari, edge
+         */
+    }
 
-        if (driver == null) {
+    public static WebDriver getDriver(){
+
+
+        String istenenBrowser = ConfigReader.getProperty("browser");
+        // chrome, firefox, safari, edge
+
+
+        if(driver == null){
 
             switch (istenenBrowser){
                 case "firefox" :
@@ -34,13 +46,15 @@ public class Driver {
                     WebDriverManager.safaridriver().setup();
                     driver= new SafariDriver();
                     break;
+
                 case "edge" :
                     WebDriverManager.edgedriver().setup();
-                    driver= new EdgeDriver();
+                    driver = new EdgeDriver();
                     break;
                 default:
                     WebDriverManager.chromedriver().setup();
-                    driver= new ChromeDriver();
+                    driver = new ChromeDriver();
+
             }
 
             driver.manage().window().maximize();
@@ -48,25 +62,23 @@ public class Driver {
         }
 
         return driver;
-
     }
 
-    public static void closeDriver() {
 
-        if (driver != null) {
+    public static void closeDriver(){
+
+        if (driver != null){
             driver.close();
-            driver = null;
+            driver=null;
         }
-
     }
 
     public static void quitDriver(){
 
-      if(driver!=null){
-         driver.quit();
-          driver=null;
-      }
-
+        if (driver != null){
+            driver.quit();
+            driver=null;
+        }
     }
 
 }

@@ -16,7 +16,6 @@ public class C01_Positive_Login_Test {
 
         // 1 - go to the "https://www.qualitydemy.com/"
         Driver.getDriver().get("https://www.qualitydemy.com/");
-        ReusableMethods.wait(5);
 
         qualityDemyPage.cookieAccept.click();
 

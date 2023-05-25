@@ -1,0 +1,31 @@
+<!--
+Toplu calistirmada calisacak methodlari tek tek xml dosyasia islemek yerine, her method`un dahil olacagi test gruplarini
+methodlarin bulundudu yerde isaretliyebiliriz.
+
+Ornegin smoke test icin buradan tek tek method secmek yerine smoke olarak calisacak test methodl`larini framework`de
+gruplayabiliriz.
+
+Bir gruba dahil olan test method`lari farkli konumlarda olabilecegi gibi, bir tek test method`u birden fazla gruba dahil
+olabilir. Bu durumda grup calistirmasi icin iki hiyerarsi olusturulmalidir.
+   1- calisacak veya calismayacak gruplari belirlemek icin
+   2- calistirmak istedigimiz method`larin yerini gostermek icin
+
+Include ve exclude birden fazla kullanilabilir. istedigimiz ozelliklere sahip methodlari net olarak belirleyebiliriz.
+Include ve exclude cakisinca exclude sozu gecer.
+   -->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Istenen Gruplari Calistirma">
+    <test name="Smoke Test">
+        <groups>
+            <run>
+                <include name="minireg1"></include>
+                <exclude name="smoke"></exclude>
+            </run>
+        </groups>
+        <packages>
+            <package name="Tests.*"></package>
+        </packages>
+    </test>
+</suite>

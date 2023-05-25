@@ -1,0 +1,30 @@
+<!-- TestNG ile toplu dosya calistirmak icin xml uzantili dosyalar kullaniriz.
+     xml dosyalari HTML kodlarina benzer sekilde yazilan xml kodlarindan olusur.
+     Toplu calistima icin ihtiyacimiz olan xml kodlari testng.org sayfasindan alinir.
+
+     Tum testNG xml dosyalari <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" > kodu ile baslamalidir.
+     Bu Kode testNG sayfasindan alinabilir.
+
+     Daha sonra calistiracagimiz testleri hiyerarsik olarak xml dosyasinda belirleyebiliriz.
+       Suite ve test ile basladiktan sonra class istedigimiz gibi listeleyebiliriz ama oncelik Suite ve Test olarak baslamak.
+       -->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Istenen Class`lari Calistirma">
+    
+   <test name="smokeTest">
+
+       <classes>
+           <class name="Tests.Day12_Page_Object_Model.C05_Qualitydemy_Login_Test"></class>
+           <class name="Tests.Day12_Page_Object_Model.C01_Positive_Login_Test"></class>
+           <class name="Tests.Day12_Page_Object_Model.C02_Negative_Login_Test"></class>
+           
+       </classes>
+
+   </test>
+
+</suite>
+
+   
+   

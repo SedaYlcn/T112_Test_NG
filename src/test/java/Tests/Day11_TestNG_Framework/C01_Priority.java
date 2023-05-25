@@ -17,7 +17,7 @@ public class C01_Priority {
 
      */
 
-    @Test (priority = 20)
+    @Test (groups = "smoke")
     public void amazonTest(){
         // Amazon ana sayfasina gidip, gittigimizi test edelim
         Driver.getDriver().get("https://www.amazon.com");
@@ -44,7 +44,7 @@ public class C01_Priority {
 
     }
 
-    @Test (priority = 3)
+    @Test (groups = {"smoke" , "minireg1"})
     public void youtubeTest(){
         // Youtube ana sayfasina gidip, gittigimizi test edelim
 
